@@ -25,6 +25,8 @@ set(PROJECT_SOURCES
         config.h
         object.h
         object.cpp
+        dialog.h
+        dialog.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

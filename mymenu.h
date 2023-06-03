@@ -9,7 +9,6 @@ class Mymenu : public QWidget
     Q_OBJECT
 public:
     explicit Mymenu(QWidget *parent = 0);
-    void paintEvent(QPaintEvent *event);
     /*
 signals:
     void readyforquit();

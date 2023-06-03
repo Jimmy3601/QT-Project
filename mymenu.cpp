@@ -8,7 +8,7 @@ Mymenu::Mymenu(QWidget *parent) : QWidget(parent)
 
 
 }
-
+/*
 //背景设置
 void Mymenu::paintEvent(QPaintEvent *event)
 {
@@ -18,4 +18,4 @@ void Mymenu::paintEvent(QPaintEvent *event)
     painter.drawImage(0,0,bg);
 
 }
-
+*/

@@ -3,7 +3,6 @@
 #include "./ui_mainwindow.h"
 #include "config.h"
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -35,8 +34,39 @@ MainWindow::MainWindow(QWidget *parent)
     //});
 }
 
+void MainWindow::paintEvent(QPaintEvent *event)
+{
+    QPainter painter(this);
+    QImage bg(":/menu/res/bk.png");
+    bg=bg.scaled(size(),Qt::KeepAspectRatioByExpanding);
+    painter.drawImage(0,0,bg);
+}
+
+
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+
+
+void MainWindow::on_QuitButton_clicked()
+{
+    delete this;
+}
+
+
+void MainWindow::on_IntroButton_clicked()
+{
+    auto a = new Dialog(this);
+    a->show();
+
+}
+
+
+void MainWindow::on_Start_game_clicked()
+{
+
 }
 
