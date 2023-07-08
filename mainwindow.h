@@ -6,6 +6,7 @@
 #include <QDockWidget>
 #include "dialog.h"
 #include <QPainter>
+#include "choose.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,14 +19,13 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+
     ~MainWindow();
     void paintEvent(QPaintEvent *event);
 
-private slots:
-    void on_QuitButton_clicked();
-    void on_IntroButton_clicked();
+    int cntBGM;
 
-    void on_Start_game_clicked();
+private slots:
 
 private:
     Ui::MainWindow *ui;
